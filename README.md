@@ -28,6 +28,12 @@ Our innovative approach offers several advantages over traditional adverb classi
 
 Join us on this linguistic journey as we explore new horizons in Japanese adverb classification using state-of-the-art techniques.
 
-## Getting Started
+### Files
 
-To get started with our adverb classification approach, please refer to the [Installation](#installation) and [Usage](#usage) sections in this repository.
+1. **Japanese_adverbs.csv**: This CSV file contains a comprehensive list of Japanese adverbs used in our analysis, along with their English translations. It serves as the foundational dataset for our project.
+
+### Jupyter Notebooks
+
+2. **tohoku_BERT_analysis.ipynb**: This Jupyter Notebook explores the analysis of Japanese adverbs using the BERT model pretrained on Japanese text. It covers the steps for generating embeddings, dimensionality reduction, semantic positioning, and clustering. You can use this notebook to delve into the details of our BERT-based analysis.
+
+3. **waseda_RoBERTa_analysis.ipynb**: In this Jupyter Notebook, we delve into the analysis of Japanese adverbs using the RoBERTa model pretrained on Japanese text. The notebook guides you through the process of generating embeddings, reducing dimensionality, performing semantic positioning, and clustering. It provides insights into our RoBERTa-based analysis.
