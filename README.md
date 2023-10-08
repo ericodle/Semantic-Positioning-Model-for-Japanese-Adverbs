@@ -36,10 +36,28 @@ Join us on this linguistic journey as we explore new horizons in Japanese adverb
 
 3. **waseda_RoBERTa_analysis.ipynb**: In this Jupyter Notebook, we delve into the analysis of Japanese adverbs using the RoBERTa model pretrained on Japanese text. The notebook guides you through the process of generating embeddings, reducing dimensionality, performing semantic positioning, and clustering. It provides insights into our RoBERTa-based analysis.
 
-## Research Paper
+## Citing Our Research
 
-Our research paper, titled "Semantic Positioning of Japanese Adverbs Using Advanced Language Models," provides a comprehensive overview of the methodology, results, and insights derived from this repository. You can access the full paper by following this link: [Research Paper - Semantic Positioning of Japanese Adverbs](https://example.com/your-research-paper-link).
+Our research paper, titled "Semantic Positioning of Japanese Adverbs Using Advanced Language Models" provides a comprehensive overview of the methodology, results, and insights derived from this repository. You can access the full paper by following this link: [Research Paper - Semantic Positioning of Japanese Adverbs](https://example.com/your-research-paper-link).
 
+If you find our research and code useful in your work, we kindly request that you cite our associated research paper in your publications. You can find the paper through the following citation:
+
+**Title:** [Title of Your Research Paper]
+**Authors:** [Your Name(s) and Collaborators]
+**Journal:** [Name of the Journal or Conference]
+**Year:** [Publication Year]
+**DOI:** [Digital Object Identifier, if available]
+
+Here is the preferred citation in BibTeX format:
+
+```bibtex
+@article{your_citation_key,
+  title = {Title of Your Research Paper},
+  author = {Your Name(s) and Collaborators},
+  journal = {Name of the Journal or Conference},
+  year = {Publication Year},
+  doi = {DOI if available}
+}
 
 ## License
 
