@@ -40,3 +40,7 @@ Join us on this linguistic journey as we explore new horizons in Japanese adverb
 ## Research Paper
 
 Our research paper, titled "Semantic Positioning of Japanese Adverbs Using Advanced Language Models," provides a comprehensive overview of the methodology, results, and insights derived from this repository. You can access the full paper by following this link: [Research Paper - Semantic Positioning of Japanese Adverbs](https://example.com/your-research-paper-link).
+
+### Citation
+
+If you use our research or findings in your work, we kindly request that you cite our paper using the following citation format:
