@@ -58,7 +58,7 @@ Here is the preferred citation in BibTeX format:
   year = {Publication Year},
   doi = {DOI if available}
 }
-
+```
 ## License
 
 This project is open-source and is released under the [MIT License](LICENSE). Feel free to use and build upon our work while giving appropriate credit.
