@@ -38,7 +38,7 @@ Join us on this linguistic journey as we explore new horizons in Japanese adverb
 
 ## Citing Our Research
 
-Our research paper, titled "Semantic Positioning of Japanese Adverbs Using Advanced Language Models" provides a comprehensive overview of the methodology, results, and insights derived from this repository. You can access the full paper by following this link: [Research Paper - Semantic Positioning of Japanese Adverbs](https://example.com/your-research-paper-link).
+Our research paper provides a comprehensive overview of the methodology, results, and insights derived from this repository. You can access the full paper by following this link: [Semantic Positioning Model Incorporating BERT/RoBERTa and Fuzzy Theory Achieves More Nuanced Japanese Adverb Clustering](https://www.mdpi.com/2079-9292/12/19/4185/pdf).
 
 If you find our research and code useful in your work, we kindly request that you cite our associated research paper in your publications. You can find the paper through the following citation:
 
