@@ -42,7 +42,7 @@ Our research paper provides a comprehensive overview of the methodology, results
 
 If you find our research and code useful in your work, we kindly request that you cite our associated research paper in your publications. You can find the paper through the following citation:
 
-*Odle, E.; Hsueh, Y.-J.; Lin,
+Odle, E.; Hsueh, Y.-J.; Lin,
 P.-C. Semantic Positioning Model
 Incorporating BERT/RoBERTa and
 Fuzzy Theory Achieves More
@@ -50,7 +50,7 @@ Nuanced Japanese Adverb
 Clustering. Electronics 2023, 12, 4185.
 https://doi.org/10.3390/
 electronics12194185
-```
+
 ## License
 
 This project is open-source and is released under the [MIT License](LICENSE). Feel free to use and build upon our work while giving appropriate credit.
