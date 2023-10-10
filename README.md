@@ -42,22 +42,14 @@ Our research paper provides a comprehensive overview of the methodology, results
 
 If you find our research and code useful in your work, we kindly request that you cite our associated research paper in your publications. You can find the paper through the following citation:
 
-**Title:** [Semantic Positioning Model Incorporating BERT/RoBERTa and Fuzzy Theory Achieves More Nuanced Japanese Adverb Clustering]
-**Authors:** [Odle, Eric and Hsueh, Yun-Ju and Lin, Pei-Chun]
-**Journal:** [Electronics]
-**Year:** [2023]
-**DOI:** [https://doi.org/10.3390/electronics12194185]
-
-Here is the preferred citation in BibTeX format:
-
-```bibtex
-@article{your_citation_key,
-  title = {Title of Your Research Paper},
-  author = {Your Name(s) and Collaborators},
-  journal = {Name of the Journal or Conference},
-  year = {Publication Year},
-  doi = {DOI if available}
-}
+*Odle, E.; Hsueh, Y.-J.; Lin,
+P.-C. Semantic Positioning Model
+Incorporating BERT/RoBERTa and
+Fuzzy Theory Achieves More
+Nuanced Japanese Adverb
+Clustering. Electronics 2023, 12, 4185.
+https://doi.org/10.3390/
+electronics12194185
 ```
 ## License
 
