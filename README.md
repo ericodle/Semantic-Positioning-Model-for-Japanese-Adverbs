@@ -42,11 +42,11 @@ Our research paper provides a comprehensive overview of the methodology, results
 
 If you find our research and code useful in your work, we kindly request that you cite our associated research paper in your publications. You can find the paper through the following citation:
 
-**Title:** [Title of Your Research Paper]
-**Authors:** [Your Name(s) and Collaborators]
-**Journal:** [Name of the Journal or Conference]
-**Year:** [Publication Year]
-**DOI:** [Digital Object Identifier, if available]
+**Title:** [Semantic Positioning Model Incorporating BERT/RoBERTa and Fuzzy Theory Achieves More Nuanced Japanese Adverb Clustering]
+**Authors:** [Odle, Eric and Hsueh, Yun-Ju and Lin, Pei-Chun]
+**Journal:** [Electronics]
+**Year:** [2023]
+**DOI:** [https://doi.org/10.3390/electronics12194185]
 
 Here is the preferred citation in BibTeX format:
 
