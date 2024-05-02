@@ -18,23 +18,84 @@ Our approach combines advanced language models, such as BERT and RoBERTa, with f
 
 6. **Quantitative Clustering**: We generate a centroid distance matrix, offering a quantitative "fingerprint" for Japanese adverbs, revealing how they cluster together.
 
-## Advantages
 
-Our innovative approach offers several advantages over traditional adverb classification methods:
+## Prerequisite
 
-- Empirical and data-driven
-- Intuitive visualization of semantic relationships
-- Quantitative "fingerprint" for adverb clustering
+Install [Python3](https://www.python.org/downloads/) on your computer.
 
-Join us on this linguistic journey as we explore new horizons in Japanese adverb classification using state-of-the-art techniques.
+Enter this into your computer's command line interface (terminal, control panel, etc.) to check the version:
 
-### Files
+  ```sh
+  python --version
+  ```
 
-1. **Japanese_adverbs.csv**: This CSV file contains a comprehensive list of Japanese adverbs used in our analysis, along with their English translations. It serves as the foundational dataset for our project.
+If the first number is not a 3, update to Python3.
 
-2. **tohoku_BERT_analysis.ipynb**: This Jupyter Notebook explores the analysis of Japanese adverbs using the BERT model pretrained on Japanese text. It covers the steps for generating embeddings, dimensionality reduction, semantic positioning, and clustering. You can use this notebook to delve into the details of our BERT-based analysis.
+## Setup
 
-3. **waseda_RoBERTa_analysis.ipynb**: In this Jupyter Notebook, we delve into the analysis of Japanese adverbs using the RoBERTa model pretrained on Japanese text. The notebook guides you through the process of generating embeddings, reducing dimensionality, performing semantic positioning, and clustering. It provides insights into our RoBERTa-based analysis.
+Here is an easy way to use our GitHub repository.
+
+### Step 1: Clone the repository
+
+
+Open the command line interface and run:
+  ```sh
+  git clone https://github.com/ericodle/Semantic-Positioning-Model-for-Japanese-Adverbs.git
+  ```
+
+You have now downloaded the entire project, including all its sub-directories (folders) and files.
+(We will avoid using Git commands.)
+
+### Step 2: Navigate to the project directory
+Find where your computer saved the project, then enter:
+
+  ```sh
+  cd /path/to/project/directory
+  ```
+
+If performed correctly, your command line interface should resemble
+
+```
+user@user:~/Semantic-Positioning-Model-for-Japanese-Adverbs-main$
+```
+
+### Step 3: Create a virtual environment: 
+Use a **virtual environment** so library versions on your computer match the versions used during development and testing.
+
+
+```sh
+python3 -m venv adverbs-env
+```
+
+A virtual environment named "adverbs-env" has been created. 
+Enter the environment by using the following command:
+
+
+```sh
+source adverbs-env/bin/activate
+```
+
+When performed correctly, your command line interface prompt should look like 
+
+```
+(adverbs-env) user@user:~//Semantic-Positioning-Model-for-Japanese-Adverbs-main$
+```
+
+### Step 3: Install requirements.txt
+
+Avoid dependency hell by installing specific software versions known to work well together.
+
+  ```sh
+pip install -r requirements.txt
+  ```
+
+### Step 4: run_analysis.py
+
+This script analyzes adverb embeddings using pre-trained language models by clustering them with K-Means, visualizing the clusters in both 3D and 2D scatter plots, and conducting silhouette analysis to determine an optimal number of clusters. It then saves the results, including cluster assignments and distances between centroids, to files for further analysis.
+
+```sh
+python3 ./run_analysis.py ./adverbs.csv ./test_output bert bert-base-japanese
+```
 
 ## Citing Our Research
 
