@@ -12,7 +12,6 @@ from sklearn.metrics import silhouette_score
 from sklearn.preprocessing import MinMaxScaler
 from scipy.spatial.distance import cdist
 
-
 def main(csv_file_path, output_dir, model_type):
     # Load the BERT tokenizer and model based on the specified model type
     if model_type == "bert-large-japanese":
@@ -140,7 +139,6 @@ def main(csv_file_path, output_dir, model_type):
     plt.ylabel('Silhouette Score')
     plt.savefig(silhouette_path, dpi=600)
     plt.close()
-
 
 if __name__ == "__main__":
     if len(sys.argv) != 4:
