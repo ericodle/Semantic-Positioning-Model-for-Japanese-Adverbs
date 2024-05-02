@@ -1,4 +1,4 @@
-import argparse
+import sys
 import os
 import csv
 from transformers import AutoTokenizer, AutoModelForMaskedLM
@@ -13,27 +13,30 @@ from sklearn.metrics import silhouette_score
 from sklearn.preprocessing import MinMaxScaler
 from scipy.spatial.distance import cdist
 
-def parse_arguments():
-    parser = argparse.ArgumentParser(description="Adverb Embedding Analysis Script")
-    parser.add_argument("csv_file_path", type=str, help="Path to the CSV file with adverbs")
-    parser.add_argument("output_dir", type=str, help="Directory to save output files")
-    parser.add_argument("model_type", type=str, choices=["roberta-base-japanese", "roberta-large-japanese"], help="Type of BERT model")
-    return parser.parse_args()
-
 def main():
-    # Parse command-line arguments
-    args = parse_arguments()
+    # Check if correct number of arguments are passed
+    if len(sys.argv) != 4:
+        print("Usage: python script.py <csv_file_path> <output_dir> <model_name>")
+        sys.exit(1)
+
+    # Extract command-line arguments
+    csv_file_path = sys.argv[1]
+    output_dir = sys.argv[2]
+    model_name = sys.argv[3]
+
+    # Prepend "nlp-waseda/" to the model name
+    model_type = f"nlp-waseda/{model_name}"
 
     # Load BERT tokenizer and model based on the specified model type
-    tokenizer = AutoTokenizer.from_pretrained(args.model_type)
-    model = AutoModelForMaskedLM.from_pretrained(args.model_type)
+    tokenizer = AutoTokenizer.from_pretrained(model_type)
+    model = AutoModelForMaskedLM.from_pretrained(model_type)
 
     # Create output directory if it doesn't exist
-    if not os.path.exists(args.output_dir):
-        os.makedirs(args.output_dir)
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
 
     # Read the CSV file with adverbs
-    data = pd.read_csv(args.csv_file_path, header=None, encoding="utf-8")
+    data = pd.read_csv(csv_file_path, header=None, encoding="utf-8")
     adverbs = data.iloc[:, 0].tolist()
     true_labels = data.iloc[:, 1].tolist()
 
@@ -105,12 +108,12 @@ def main():
     ax.legend()
 
     # Save 3D scatter plot
-    plt.savefig(os.path.join(args.output_dir, 'pre_analysis_3d_scatterplot.png'), dpi=600)
+    plt.savefig(os.path.join(output_dir, 'pre_analysis_3d_scatterplot.png'), dpi=600)
     plt.close()
 
     # Calculate distance matrix between cluster centroids
     centroid_distances = cdist(kmeans.cluster_centers_, kmeans.cluster_centers_)
-    np.savetxt(os.path.join(args.output_dir, 'pre_dist.csv'), centroid_distances, delimiter=",")
+    np.savetxt(os.path.join(output_dir, 'pre_dist.csv'), centroid_distances, delimiter=",")
 
     # Silhouette analysis
     sil_scores = []
@@ -126,7 +129,7 @@ def main():
     plt.title('Silhouette Score')
     plt.xlabel('Number of clusters')
     plt.ylabel('Silhouette Score')
-    plt.savefig(os.path.join(args.output_dir, 'silhouette_analysis.png'), dpi=600)
+    plt.savefig(os.path.join(output_dir, 'silhouette_analysis.png'), dpi=600)
     plt.close()
 
     # Re-analyze adverb embeddings with optimized number of clusters
@@ -142,7 +145,7 @@ def main():
     adverb_cluster_dict = {adverb: cluster_label for adverb, cluster_label in zip(adverbs, cluster_labels)}
     adverb_true_label_to_cluster = {adverb: {"TrueLabel": adverb_label_dict[adverb], "ClusterLabel": adverb_cluster_dict[adverb]} for adverb in adverbs}
 
-    output_csv_file_path = os.path.join(args.output_dir, "post_analysis.csv")
+    output_csv_file_path = os.path.join(output_dir, "post_analysis.csv")
     with open(output_csv_file_path, mode='w', newline='', encoding='utf-8') as csv_file:
         fieldnames = ['Adverb', 'TrueLabel', 'ClusterLabel']
         writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
@@ -178,11 +181,11 @@ def main():
     plt.legend()
 
     # Save scatter plot
-    plt.savefig(os.path.join(args.output_dir, 'post_analysis_scatterplot.png'), dpi=600)
+    plt.savefig(os.path.join(output_dir, 'post_analysis_scatterplot.png'), dpi=600)
     plt.close()
 
     centroid_distances = cdist(kmeans.cluster_centers_, kmeans.cluster_centers_)
-    np.savetxt(os.path.join(args.output_dir, 'post_dist.csv'), centroid_distances, delimiter=",")
+    np.savetxt(os.path.join(output_dir, 'post_dist.csv'), centroid_distances, delimiter=",")
 
 if __name__ == "__main__":
     main()
